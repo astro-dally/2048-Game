@@ -1,21 +1,27 @@
-<head>
-    <meta charset="utf-8">
-    <title>2048 Game Online</title>
-    <link rel="stylesheet" href="style.css">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2048 Game</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
-      <div class="info">
-        <h1>2048</h1>
-        <div class="score-container">
-          <div class="score-title">score</div>
-          <span id="score">0</span>
-        </div>
-        <button id="restart-button">Restart Game</button>
+      <h1 class="title">2048 Game</h1>
+      <div class="theme-toggle">
+        <button id="toggle-button">Change Theme</button>
       </div>
-      <span id="result">Join the numbers and get to the <b>2048</b> tile!</span>
+      <div class="score-container">
+        <div class="score-title">Score:</div>
+        <span id="score">0</span>
+      </div>
       <div class="grid"></div>
+      <div id="game-over" class="game-over">Game Over!</div>
+      <div id="win" class="win">You Win!</div>
+      <button id="restart-button" class="restart-button">New Game</button>
     </div>
     <script src="index.js"></script>
-
   </body>
+</html>
+
