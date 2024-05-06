@@ -1,4 +1,4 @@
-##2048 Game README
+## 2048 Game README
 
 Welcome to the 2048 game repository! 🎮
 
