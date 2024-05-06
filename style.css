@@ -1,67 +1,154 @@
+/* Resetting styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body styles */
 body {
-  background-color: #faf8ef;
-  display: flex;
-  justify-content: center;
-  font-family: "Clear Sans", "Helvetica Neue";
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
 }
 
-h1 {
-  font-size: 80px;
-  line-height: 0.7;
-  color: #776E65;
-  margin: 0px;
-}
-
+/* Container styles */
 .container {
-  width: 468px;
-  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
-.info {
-  display: flex;
-  justify-content: space-between;
+/* Title styles */
+.title {
+  font-size: 60px;
+  color: #776e65;
   margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
-.grid{
-  display: flex;
-  flex-wrap: wrap;
-  width: 456px;
-  height: 456px;
-  background-color: #BBADA0;
-  border: 7px solid #BBADA0;
-  border-radius: 6px;
+/* Theme toggle styles */
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.theme-toggle button {
+  background-color: #4f6666;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.theme-toggle button:hover {
+  background-color: #53b5cd;
+}
+
+/* New game button styles */
+.restart-button {
+  background-color: #8f7a66;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
   margin-top: 20px;
 }
 
-.grid div {
-  width: 100px;
-  height: 100px;
-  margin: 7px;
-  border-radius: 3px;
-  background-color: #EEE4DA;
-  color: #afa192;
-  font-weight: bold;
-  text-align: center;
-  font-size: 60px;
-  line-height: 1.6;
+.restart-button:hover {
+  background-color: #a3927a;
 }
 
-.score-container, button{
-  text-align: center;
-  height: 60px;
-  border-radius: 3px;
-  background-color: #8f7a66;
-  color: #FFFFFF;
-}
+/* Score container styles */
 .score-container {
- width: 70px
+  background-color: #bbada0;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.score-title {
+  font-size: 20px;
+  margin-right: 10px;
 }
 
 #score {
-  font-size: 30px;
+  font-size: 24px;
 }
 
-.score-title, #restart-button {
-  font-size: 16px;
+/* Grid styles */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(4, 100px);
+  gap: 10px;
+  background-color: #bbada0;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.grid div {
+  background-color: #cdc1b4;
+  color: #776e65;
+  font-size: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.grid div:hover {
+  background-color: #d4c0a5;
+}
+
+/* Game over and win styles */
+.game-over, .win {
+  display: none;
+  font-size: 36px;
+  font-weight: bold;
+  color: #776e65;
+  margin-top: 20px;
+}
+
+/* Dark theme styles */
+.dark-theme {
+  background-color: #1e272e;
+  color: #ffffff;
+}
+
+.dark-theme .container {
+  background-color: #2c3e50;
+}
+
+.dark-theme .instructions,
+.dark-theme .score-container,
+.dark-theme .grid div {
+  background-color: #34495e;
+}
+
+.dark-theme .restart-button {
+  background-color: #4a69bd;
+}
+
+.dark-theme .restart-button:hover {
+  background-color: #5c7cfa;
 }
